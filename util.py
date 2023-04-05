@@ -8,8 +8,8 @@ import numpy as np
 
 
 def sobel_x(path):
-    image = cv2.imread(path)
-    image= cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    image = cv2.imread(path,0)
+    # image= cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
     gradients_sobelx = cv2.Sobel(image, -1, 1, 0)
     cv2.imshow('Sobel X', gradients_sobelx)
@@ -19,8 +19,8 @@ def sobel_x(path):
 
 
 def sobel_y(path):
-    image = cv2.imread(path)
-    image= cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    image = cv2.imread(path,0)
+    # image= cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     gradients_sobely = cv2.Sobel(image, -1, 0, 1)
     cv2.imshow('Sobel Y', gradients_sobely)
     
@@ -29,9 +29,9 @@ def sobel_y(path):
     
 
 
-def soble_xy(path):
-    image = cv2.imread(path)
-    image= cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+def sobel_xy(path):
+    image = cv2.imread(path,0)
+    # image= cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     gradients_sobelx = cv2.Sobel(image, -1, 1, 0)
     gradients_sobely = cv2.Sobel(image, -1, 0, 1)
 
@@ -46,8 +46,8 @@ def soble_xy(path):
 
 
 def laplacian(path):
-    image = cv2.imread(path)
-    image= cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    image = cv2.imread(path,0)
+    # image= cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     gradients_laplacian = cv2.Laplacian(image, -1)
     cv2.imshow('laplacian', gradients_laplacian)
     
@@ -57,8 +57,8 @@ def laplacian(path):
 
 
 def canny(path):
-    image = cv2.imread(path)
-    image= cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    image = cv2.imread(path,0)
+    # image= cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     
     canny_output = cv2.Canny(image, 80, 150)
     cv2.imshow('Canny', canny_output)   
@@ -66,5 +66,5 @@ def canny(path):
     cv2.waitKey()
     
 
-
-canny('test.jfif')
+####### Testing the funcrions #######
+# canny('./input_images/1.jfif')
