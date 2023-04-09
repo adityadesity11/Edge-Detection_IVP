@@ -2,11 +2,6 @@ import cv2
 import numpy as np
 
 
-
-
-
-
-
 def sobel_x(path):
     image = cv2.imread(path,0)
     # image= cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
@@ -14,8 +9,7 @@ def sobel_x(path):
     gradients_sobelx = cv2.Sobel(image, -1, 1, 0)
     cv2.imshow('Sobel X', gradients_sobelx)
     
-    cv2.waitKey()
-    
+    cv2.waitKey()    
 
 
 def sobel_y(path):
@@ -25,7 +19,6 @@ def sobel_y(path):
     cv2.imshow('Sobel Y', gradients_sobely)
     
     cv2.waitKey()
-
     
 
 
@@ -39,8 +32,6 @@ def sobel_xy(path):
     cv2.imshow('Sobel X+Y', gradients_sobelxy)
     
     cv2.waitKey()
-
-
 
     
 
