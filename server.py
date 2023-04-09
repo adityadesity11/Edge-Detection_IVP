@@ -9,6 +9,11 @@ def home():
 
 @app.route('/edge_detection',methods=['GET','POST'])
 def edge():
+    
+    return render_template('index.html')
+
+@app.route('/output',methods=['GET','POST'])
+def output():
     path = "./input_images/"
     name = str(request.form['img'])
     algo = request.form['algorithm']
@@ -26,9 +31,7 @@ def edge():
     elif(algo == 'canny'):
         util.canny(img_path)
 
-    return render_template('index.html')
-
-
+    return render_template('new.html')
 
 
 if __name__ == "__main__":
